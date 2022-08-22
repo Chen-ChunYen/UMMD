@@ -1,0 +1,3 @@
+# id  level  field  range  fan_num  name
+   0      1     0       1     5000  "Test race 1"
+   1      2     1       3      400  "Test race 2"
