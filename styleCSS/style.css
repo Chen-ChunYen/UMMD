@@ -1,0 +1,62 @@
+/* Global variable for the css*/
+/* --name: var;*/
+:root {
+    --bright-blue: hsl(245, 75%, 52%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+    /* background-image: url("../kyo ace.png"); */
+    background-repeat: no-repeat;
+    /*background-size: cover;*/
+    background-size: contain; /* same width as the current page*/
+    /* background-color: var(--bright-blue); */
+}
+/* tag selector*/
+h2 {
+    background-color: var(--bright-blue);  
+}
+
+div {
+    border-width: 5px;
+    border-color: red;
+    border-style: dashed;
+    box-sizing: border-box;  /* https://developer.mozilla.org/zh-TW/docs/Web/CSS/box-sizing */
+}
+
+/* class selector*/
+.bg_aqua {
+    background-color: aqua;  
+}
+
+.race_div {
+    border-radius: 25px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    background-color: yellow;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.div_left{
+    float: left;
+    width: 20%;
+    padding: 0;
+}
+
+.div_mid{
+    float: left;
+    width: 60%;
+    padding: 0;
+}
+
+.div_right{
+    float: left;
+    width: 20%;
+    padding: 0;
+}
