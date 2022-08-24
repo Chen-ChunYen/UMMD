@@ -35,6 +35,8 @@ div {
     border-color: black;
     border-style: solid;
     background-color: yellow;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .row:after {
@@ -43,20 +45,42 @@ div {
   clear: both;
 }
 
-.div_left{
+.div_left {
     float: left;
     width: 20%;
     padding: 0;
 }
 
-.div_mid{
+.div_mid {
     float: left;
     width: 60%;
     padding: 0;
 }
 
-.div_right{
+.div_right {
     float: left;
     width: 20%;
     padding: 0;
+}
+
+.div_year_left {
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+
+.div_year_right {
+    float: left;
+    width: 80%;
+}
+
+.div_month_left {
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+
+.div_month_right {
+    float: left;
+    width: 80%;
 }

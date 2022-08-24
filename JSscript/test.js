@@ -1,12 +1,9 @@
-/*
-var test = document.querySelectorAll('#first');
-console.log(test);
-console.log("123");
-console.log(test.length);
-for ( let i = 0; i < test.length; i++ ) {
-    test[i].style.backgroundColor="green";
-}
-*/
+var race_name  = [];
+var race_fan   = [];
+var race_class = [];
+var race_year  = [];
+var race_month = [];
+var race_ud    = [];
 
 class Race {
     constructor( name, fan ) {
@@ -23,7 +20,7 @@ class Race {
 function createRaceDiv( race_year, race_month, race_arr ) {
     var new_div = document.createElement('div');
     new_div.classList.add("race_div");
-    new_div.classList.add("row");
+    new_div.classList.add("div_time_right");
     
     var sel = document.createElement('select');
     var race_class = ['G1', 'G2', 'G3' ,'OP', 'Pre-OP'];
@@ -42,7 +39,6 @@ function createRaceDiv( race_year, race_month, race_arr ) {
         }
         sel.appendChild(opt_g);
     }
-    new_div.innerHTML='Year: ' + String(race_year) + ', Month: ' + String(race_month);
     new_div.appendChild(sel);
     
     return new_div;
@@ -63,11 +59,35 @@ var all_race = [ [race_1],
                  [race_5, race_6]];
     
 
-var mid = document.getElementById('first');
+var mid = document.getElementById('year');
 console.log(mid);
-for ( let i = 0; i < 4; i++ ) {
-    var race_div = createRaceDiv(1, i, all_race);
-    mid.appendChild(race_div);
+for ( let i = 0; i < 2; i++ ) {
+    var year_div = document.createElement('div');
+    year_div.classList.add('row');
+    var year_num = document.createElement('div');
+    year_num.classList.add('div_year_left');
+    year_num.innerHTML = 'Year: ' + String(i+1);
+    var year     = document.createElement('div');
+    year.classList.add('div_year_right');
+    year_div.appendChild(year_num);
+    for ( let j = 0; j < 12; j++ ) { 
+        var month_div = document.createElement('div');
+        month_div.classList.add('row');
+        var month_num = document.createElement('div');
+        month_num.classList.add('div_month_left');
+        month_num.innerHTML = 'Month: ' + String(j+1);
+        var month     = document.createElement('div');
+        month.classList.add('div_month_right');
+        month_div.appendChild(month_num);
+        for ( let k = 0; k < 2; k++ ) { 
+            var race_div = createRaceDiv(1, i, all_race);
+            month.appendChild(race_div);
+        }
+        month_div.appendChild(month);
+        year.appendChild(month_div);
+    }
+    year_div.appendChild(year);
+    mid.appendChild(year_div);
 }
 
 
