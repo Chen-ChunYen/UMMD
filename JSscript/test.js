@@ -91,6 +91,6 @@ function readTextFile(file)
     
 } // function readTextFile(file)
 
-//readTextFile('https://github.com/Chen-ChunYen/UMMD/blob/data/Data/race_data.txt');
-readTextFile('./Data/race_data.txt');
+// readTextFile('https://github.com/Chen-ChunYen/UMMD/blob/data/Data/race_data.txt');
+// readTextFile('./Data/race_data.txt');
 
