@@ -1,10 +1,3 @@
-var race_name  = [];
-var race_fan   = [];
-var race_class = [];
-var race_year  = [];
-var race_month = [];
-var race_ud    = [];
-
 class Race {
     constructor( name, fan ) {
         this.name = name;
@@ -114,3 +107,8 @@ function readTextFile(file)
 // readTextFile('https://github.com/Chen-ChunYen/UMMD/blob/data/Data/race_data.txt');
 // readTextFile('./Data/race_data.txt');
 
+$.getJSON("https://github.com/Chen-ChunYen/UMMD.github.io/blob/data/Data/race.json")
+    .done(function( data ) {
+       console.log(data)
+    });
+console.log(data);
